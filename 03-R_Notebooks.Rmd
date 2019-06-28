@@ -1,0 +1,131 @@
+---
+title: "Notebooks"
+author: "Donna Wrublewski"
+output: html_notebook
+---
+
+------------
+
+> ### Learning Objectives
+>
+> * Create an R Notebook in RStudio.
+> * Enter text into an R Notebook.
+> * Enter and run code chunks into an R Notebook.
+> * Use Preview to quickly preview a Notebook.
+
+------------
+
+### About R Notebooks
+
+This is an [R Markdown Notebook](https://rmarkdown.rstudio.com/r_notebooks.html). When you 
+execute code within the notebook, the results appear beneath the code.
+
+Briefly, R Markdown is a simple way to create documents with formatting by using specific 
+symbols and characters. Programs capable of reading R Markdown can render a nicely formatted 
+document. This is similar to the way that HTML files are text documents with 
+specific tags, which are read by specific programs (web browsers, etc.) that apply those tags 
+to the text, interpret the formatting, apply it to the document, and display it. R Markdown 
+files (and R Notebooks) have the base file extension *.Rmd. An R 
+Notebook will have the line output: html_notebook in the header. 
+
+R Notebooks have a few extra features over regular R Markdown documents:
+
+* When you execute code in a Notebook, it is done line by line, so it can be easier to check 
+execution for errors. In a regular R Markdown document, code is executed all at once.
+
+* You can *Preview* your notebook using the *Preview* button - this displays a rendered HTML 
+copy of the contents of the editor, but does not actually run any code. This makes it a bit
+faster to check your output.
+
+* When you save your notebook, it creates a special *.nb.html file, which is actually a package 
+of the HTML rendering (of the page, with the code sections as separate image files in their own 
+directory) and the Markdown file. This can be shared with others and opened like a regular fine 
+from within RStudio.
+
+
+### Text Formatting
+
+To create a new R Markdown Notebook in RStudio, select File -> New File -> R Notebook.
+
+You can enter text into a Notebook as you normally would into any other text document and use Markdown conventions to format it.
+
+Enter text between the double asterisks below to format it as bold:
+** **
+
+Enter text between the underscores below to format it as italic:
+_ _
+
+Click Preview when you are finished to view your changes.
+
+Take advantage of this to document your code and data to keep it readable, understandable, and reproducible!
+
+
+### Embedding Code Chunks
+
+You can embed R code into Notebooks by using chunks, set off above and below by three reverse ticks: ``` 
+
+Try executing this chunk by clicking the *Run* button (small green arrow) within the chunk or by placing your cursor 
+inside it and pressing *Cmd+Shift+Enter*.
+
+```{r}
+a <- 17
+b <- 34
+a + b
+```
+
+The designation {r} tells the Notebook that this is executable R code.
+
+Here's another example - run it the same way:
+
+```{r cars_plot}
+plot(cars)
+```
+
+The 'cars' dataset is an example dataset built into R, and the 'plot' command is a basic R command to create a default plot of 
+simple data. We'll talk more about plotting using ggplot later on in this workshop.
+
+Note the addition of *cars_plot* in the {r} designation - this is the name of the code chunk. This can be used to 
+navigate your Notebook using the menu in the lower left of the document window. It is also used when you are calling 
+an external R script into a Notebook, and we'll see an example of that in the next example. You can also add sections to your document using headings designated by `###` - you'll learn more about that tomorrow.
+
+Add a new chunk in the space below by clicking the *Insert Chunk* button on the toolbar 
+or by pressing *Cmd+Option+I*.
+
+1. Name your chunk 'math_trick_nb_example'.
+2. Perform the following operations:
+3. Assign your shoe size to a variable.
+4. Multiply this variable by 5.
+5. Add 50.
+6. Multiply by 20.
+7. Add 1018 (1019 if you have already had your birthday this year)
+8. Subtract the year you were born.
+9. Display the answer.
+
+Insert your code chunk here:
+
+
+If you wanted to call this **script** in multiple Notebooks, you could save it as an R code file:
+
+1. Click File -> New File -> R Script.
+2. Copy and paste your code into the new file.
+3. Add the line `## ---- math_trick` at the top of your file.
+4. Save your file as `math_trick.R`.
+5. In your R Notebook, load the script using an `{r setup}` using the `knitr::read_chunk()` function as such:
+
+```{r setup}
+knitr::read_chunk("math_trick.R")
+```
+
+Note that nothing will display.
+
+6. You can now call this R script using ```{r math_trick}``` in an otherwise empty code chunk as such:
+
+```{r math_trick}
+```
+
+
+### Save and Preview
+
+After you save the notebook, an HTML file containing the code and output will be saved
+alongside it when you click the *Preview* button (or press *Cmd+Shift+K*) to preview 
+the HTML file.
