@@ -1,8 +1,10 @@
 ---
 title: "Starting with data"
 author: "Data Carpentry contributors"
+output:
+  html_document:
+    df_print: paged
 minutes: 20
-output: html_notebook
 ---
 
 ------------

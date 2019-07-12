@@ -1,12 +1,15 @@
 ---
-title: "Getting Started: R and RStudio"
+title: 'Getting Started: R and RStudio'
 author: "Data Carpentry contributors; Gail Clement; Donna Wrublewski*"
+date: "March 8, 2019"
 output:
+  html_document:
+    df_print: paged
+    toc: yes
   html_notebook:
     theme: united
     toc: yes
 minutes: 15
-date: March 8, 2019
 ---
 
 ------------

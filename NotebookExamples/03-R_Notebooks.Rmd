@@ -1,7 +1,9 @@
 ---
 title: "Notebooks"
 author: "Donna Wrublewski"
-output: html_notebook
+output:
+  html_document:
+    df_print: paged
 ---
 
 ------------
