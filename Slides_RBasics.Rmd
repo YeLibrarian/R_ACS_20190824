@@ -7,6 +7,8 @@ output:
   ioslides_presentation:
     css: slides_style.css
     widescreen: yes
+    incremental: false
+    smaller: false
   slidy_presentation: default
 
 ---
@@ -73,17 +75,44 @@ Open Tools                         What is it?
 
 ![](images/RStudioInterface.png)
 
-## Project management in R 
-- Create a self-contained project folder including a set of related data, analyses, and text that organized in subfolders
-- Remembers working directory and custom settings
+## Project management in R | Create a self-contained project folder including a set of related data, analyses, and text that organized in subfolders
+- It remembers working directory and custom settings
+- Steps in **RStudio**:
+  - 'File' menu --> click on 'New Project'. 
+  - Choose 'Existing Directory', then browse to the folder where you downloaded workshop data files.
+  - Click on 'Create Project'. An ' .Rproj' file is added to the project folder.  
+- Steps in **RStudio Cloud** 
+  - Click on **'Start'** in front of the project "Student In-Class Practice"
+  - An R Project has been created for you there.
 
-Steps:
-1. 'File' menu --> click on 'New Project'. 
-2. Choose 'Existing Directory', then browse to the folder where you downloaded workshop data files.
-3. Click on 'Create Project'. An ' .Rproj' file is added to the project folder.  
+## Project management in R | Include a set of related data, analyses, and text that organized in subfolders
+- **'data/'**: use this folder to store your raw data and intermediate datasets you may create 
+  - Always keep a copy of your raw data 
+  - do as much of your data cleanup and preprocessing with scripts
+- **'scripts/'**: use this folder for your R scripts for different analyses or plotting
+- **'figures/'**: use this folder to save figures you plot using scripts
+- **'data_output/'**: use this folder to save data files you obtained using scripts
+- **'documents/'**: use this folder for your outlines, drafts, and other texts
+- Practice: in **RStudio Cloud** / Student In-Class Practices
+  - Use 'New Folder' button in the right bottom Files section to create a solder called 'documents'
+ 
 
-On RStudio Cloud, CLick on 'Start' in front of the project "Student In-Class Practice". An R Project has been created for you there.
+## Project management in R | Working directory
+- **Working directory**: the place from where R will be looking for and saving the files
+- RStudio will now set your **working directory** as the folder where your xxx.Rproj file lives
+- Practice: in **RStudio Cloud** / Student In-Class Practices
+  - Open scripts/RBasicsPractice.R
+  - At line 6, typing "getwd()" and run it to identify the current working directory
 
+## Basic R commands
+We will now use **RStudio Cloud** / Student In-Class Practices to learn: 
+- Use R as a calculator
+- Assign value to a variable in the Environment
+- Remove variables from the Environment
+- Get tabulized data into the Environment as data frames
+- 
+
+## Getting Help
 
 
 
