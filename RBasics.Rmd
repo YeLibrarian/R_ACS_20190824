@@ -1,6 +1,6 @@
 ---
 title: "Reproducible Data Analysis and Publishing in Chemistry with R - Part I Basics"
-author: "Software Carpentry contributors; Ye Li; Steve Wathen, Donna Wrublewski"
+author: "Software / Data Carpentry contributors; Ye Li; Steve Wathen, Donna Wrublewski"
 date: "August 24, 2019"
 output:
   html_notebook:
