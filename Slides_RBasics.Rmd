@@ -104,8 +104,7 @@ Open Tools                         What is it?
   - Open scripts/RBasicsPractice.R
   - At line 6, typing "getwd()" and run it to identify the current working directory
 
-## Basic R commands
-We will now use **RStudio Cloud** / Student In-Class Practices to learn: 
+## Basic R commands | We will now use **RStudio Cloud** / Student In-Class Practices to learn: 
 - Use R as a calculator
 - Assign value to a variable in the Environment
 - Remove variables from the Environment

@@ -4,7 +4,7 @@ author: "Data Carpentry contributors"
 output:
   html_document:
     df_print: paged
-minutes: 20
+minutes: 20 
 ---
 
 ------------
