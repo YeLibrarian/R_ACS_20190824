@@ -109,10 +109,15 @@ Open Tools                         What is it?
 - Assign value to a variable in the Environment
 - Remove variables from the Environment
 - Get tabulized data into the Environment as data frames
-- 
+  - Calibration curve example 
+- Subset data frames 
+- Save data output
+- Plot figures and linear fit 
+- Save plotted figures
 
 ## Getting Help
 
+## Apply R for a simple QSAR problem
 
 
 ## R Markdown
