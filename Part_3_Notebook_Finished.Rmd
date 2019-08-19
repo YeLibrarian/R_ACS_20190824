@@ -7,17 +7,26 @@ output:
   html_notebook: default
 ---
 
+```{r}
+install.packages("knitr")
+library("knitr")
+```
+
 # Purpose
 
 # Introduction
 
 Insert image of substituted benzoic acids.
 
+Insert a link here as well. 
+
+Insert reference?
+
 # Experimental Methods
 
 # Results
 
-## Exploratory Analysis of pKa values
+## Exploratory Analysis of _pKa_ values
 
 ### pKa Values
 
