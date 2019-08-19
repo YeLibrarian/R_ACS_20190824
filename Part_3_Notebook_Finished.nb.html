@@ -7,7 +7,6 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
-<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Donna Wrublewski" />
@@ -1714,10 +1713,28 @@ summary {
 }
 </style>
 
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("Part_3_Notebook_Finished.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
 
 
 
@@ -1793,7 +1810,7 @@ summary {
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUVNBUiBMYWIgUmVwb3J0IgphdXRob3I6ICJEb25uYSBXcnVibGV3c2tpIgpkYXRlOiBBdWd1c3QgMTUsIDIwMTkKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKIyBQdXJwb3NlCgojIEludHJvZHVjdGlvbgoKSW5zZXJ0IGltYWdlIG9mIHN1YnN0aXR1dGVkIGJlbnpvaWMgYWNpZHMuCgojIEV4cGVyaW1lbnRhbCBNZXRob2RzCgojIFJlc3VsdHMKCiMjIEV4cGxvcmF0b3J5IEFuYWx5c2lzIG9mIHBLYSB2YWx1ZXMKCiMjIyBwS2EgVmFsdWVzCgpUaGVyZSBhcmUgWFhYIHZhbHVlcyBhbmQgdGhlIG1lZGlhbiB2YWx1ZSBpcyBZLgooVGhpcyB3aWxsIGJlIGdlbmVyYXRlZCBjb2RlIHBvdGVudGlhbGx5PykKCiMjIyBQbG90cwoKSW5zZXJ0IGNvZGUgZm9yIGJveHBsb3QgYW5kIGhpc3RvZ3JhbSwgd2l0aCB0aXRsZXMuCgojIyMgT3V0bGllcnMKCiMjIE1vZGVsIEJ1aWxkaW5nIFJlc3VsdHMKCk1heWJlIHBpY2sgMiBvZiB0aGVzZSB0byBkaXNjdXNzIGhlcmUgYW5kIGxpbms/CgojIyBEaXNjdXNzaW9uCgojIFJlZmVyZW5jZXMK</div>
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUVNBUiBMYWIgUmVwb3J0IgphdXRob3I6ICJEb25uYSBXcnVibGV3c2tpIgpkYXRlOiAiQXVndXN0IDE1LCAyMDE5IgpvdXRwdXQ6CiAgd29yZF9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIFB1cnBvc2UKCiMgSW50cm9kdWN0aW9uCgpJbnNlcnQgaW1hZ2Ugb2Ygc3Vic3RpdHV0ZWQgYmVuem9pYyBhY2lkcy4KCiMgRXhwZXJpbWVudGFsIE1ldGhvZHMKCiMgUmVzdWx0cwoKIyMgRXhwbG9yYXRvcnkgQW5hbHlzaXMgb2YgcEthIHZhbHVlcwoKIyMjIHBLYSBWYWx1ZXMKClRoZXJlIGFyZSBYWFggdmFsdWVzIGFuZCB0aGUgbWVkaWFuIHZhbHVlIGlzIFkuCihUaGlzIHdpbGwgYmUgZ2VuZXJhdGVkIGNvZGUgcG90ZW50aWFsbHk/KQoKIyMjIFBsb3RzCgpJbnNlcnQgY29kZSBmb3IgYm94cGxvdCBhbmQgaGlzdG9ncmFtLCB3aXRoIHRpdGxlcy4KCiMjIyBPdXRsaWVycwoKIyMgTW9kZWwgQnVpbGRpbmcgUmVzdWx0cwoKTWF5YmUgcGljayAyIG9mIHRoZXNlIHRvIGRpc2N1c3MgaGVyZSBhbmQgbGluaz8KCiMjIERpc2N1c3Npb24KCiMgUmVmZXJlbmNlcwo=</div>
 
 
 
@@ -1822,29 +1839,6 @@ $(document).ready(function () {
 });
 
 </script>
-
-<!-- tabsets -->
-
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
-<!-- code folding -->
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("Part_3_Notebook_Finished.Rmd");
-  window.initializeCodeFolding("show" === "show");
-});
-</script>
-
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

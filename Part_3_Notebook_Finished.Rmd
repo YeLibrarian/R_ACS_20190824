@@ -1,8 +1,10 @@
 ---
 title: "QSAR Lab Report"
 author: "Donna Wrublewski"
-date: August 15, 2019
-output: html_notebook
+date: "August 15, 2019"
+output:
+  word_document: default
+  html_notebook: default
 ---
 
 # Purpose
