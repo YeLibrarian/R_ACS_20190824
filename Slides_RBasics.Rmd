@@ -22,10 +22,26 @@ knitr::opts_chunk$set(echo = FALSE)
 - Wireless internet connection
 - Pre-workshop survey
 - Please accept the invitation from RStudio Cloud and create an account if you have not
-- Open group note-taking
+- Open group note-taking http://bit.ly/notesRChem 
+
+## Acknowledgement
+
+<br />  
+
+![Hosted by ACS-CINF](images/CINFLogo.gif)
+
+<br />   
+
+
+![Sponsored by ACS Publications](images/ACSPubsLogo.png)
+
 
 ## Agenda
-
+- Test technical setup 
+- Learn R Basics 
+  - Plot a calibration curve
+- Apply R to a QSAR mini-project
+- Write a report with R Markdown 
 
 ## Introduce yourself
 - Your name
@@ -39,6 +55,13 @@ Hot pinky note means stop                    Blue note means go
 -----------------------------------     ----------------------------------  
 ![](images/pink_sticky_noted.png)        ![](images/blue_sticky_noted.png)
 
+## R Basics
+- Computational reproducibility and R
+- R, RStudio, and RStudio Cloud overview
+- Project Management in RStudio 
+- Basic programming in R
+  - plotting a calibrarion curve
+- Getting help
 
 ## NASEM Consensus Report defined Reproduciblity as Computational Reproducibility | May 2019 {#report}
 
