@@ -140,7 +140,7 @@ Open Tools                         What is it?
 
 ## Getting Help
 
-## Apply R for a simple QSAR problem
+## Apply R for a QSAR mini-project
 
 
 ## R Markdown
