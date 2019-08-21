@@ -1,29 +1,18 @@
----
-layout: setup
-root: .
-assistant: []
-contact: karijljordan@carpentries.org
----
-<!--
-    Edit the values in the parameter block above to be appropriate for your bootcamp.
-    Please use three-letter month names for the 'humandate' field.
--->
+<h1>
+  Reproducible Data Analysis and Publishing in Chemistry with R
+  Setup Instructions
+</h1>
 
 <p>
   <strong>Requirements:</strong>
-Data Carpentry's teaching is hands-on, so participants are encouraged to bring in and use their own laptops to insure the proper setup of tools for an efficient workflow once you leave the workshop.  (We will provide instructions on setting up the required software several days in advance)
-<em> There are no pre-requisites, and we will assume no prior knowledge about the tools.</em> 
+This workshop is hands-on, so participants are encouraged to bring in and use their own laptops.
+
+<em> There are no pre-requisites, and we will assume no prior knowledge about the tools.</em>
 </p>
 
-
+<p>
   <strong>Contact</strong>:
-  Please email
-  {% if page.contact %}
-    <a href='mailto:{{page.contact}}'>{{page.contact}}</a>
-  {% else %}
-    <a href='mailto:{{site.contact}}'>{{site.contact}}</a>
-  {% endif %}
-  for questions and information not covered here.
+  Please email <a href='mailto:yel@mit.edu'>yel@mit.edu</a> for questions and information not covered here.
 </p>
 
 
@@ -32,27 +21,154 @@ Data Carpentry's teaching is hands-on, so participants are encouraged to bring i
 <h2>Setup</h2>
 
 <p>
-  To participate in a Data Carpentry workshop, 
-  you will need working copies of the software described below.
-  Please make sure to install everything and try opening it to make sure it works 
+  In this workshop, we will mainly use RStudio Cloud through a browser for hands-on activities.
+  Please watch out for an email invitation from RStudio Cloud to join our Learning Space there.
+  Here, as a backup solution, please install the following software on your laptop.
+  Please make sure to install everything and try opening it to make sure it works
   <em>before</em> the start of your workshop. If you run into any problems,
-please feel free to email the instructor or arrive early to your workshop on 
+please feel free to email the instructor or arrive early to your workshop on
 the first day.
-  
-Participants should bring and use their own laptops to insure the proper setup of 
-tools for an efficient workflow once you leave the workshop.
 
-<p>This workshop will be using the software outlined in the install instructions below. 
+<p>This workshop will be using the software outlined in the install instructions below.
 Please see the section for your operating system for those directions.
 <ul>
 <li><a href=#windows>Windows</a>
 <li><a href=#mac>Mac</a>
 <li><a href=#linux>Linux</a>
-</ul>  
+</ul>
 
 </p>
 
-{% include windows.html %}
-{% include mac.html %}
-{% include linux.html %}
+<h3 id="windows">Windows</h3>
+<p>
+Please go through all the installation steps below and make sure that
+you not only installed them, but start them up to make sure they're working.
 
+<div class="row-fluid">
+  <ol>
+<li><b>A word processing program</b>
+<br>For this workshop you will need a word processing program. Many people already have
+Microsoft Word installed, and if you do, you're set!
+<br>
+If you need a word processing program, there are a few other options, like OpenOffice and LibreOffice. Install
+instructions for LibreOffice, which is free and open source, are here.
+       <ul>
+          <li><b>Download the Installer</b>
+        <br>Install LibreOffice by going to the <a href=https://www.libreoffice.org/download/libreoffice-fresh/>installation page</a>. The version for Windows
+should automatically be selected. Click on the button below "Main Installer" <b>Download Version x.y.z</b>. You
+will go to a page that asks about a donation, but you don't need to make one.
+Your download should begin automatically.
+          <li><b>Install LibreOffice</b>
+            <br>Once the installer is downloaded, double click on it and it should install.
+<li>To use LibreOffice, double click on the icon and it will open.
+</ul>
+
+<p>
+
+<p>
+
+<li><b>R</b>
+<br>In the workshop, we will use RStudio. RStudio is a nice interface to the
+programming language R. To use RStudio, you need to install both R and RStudio.
+<ul>
+<li>      Download R from
+      <a href="http://cran.r-project.org/bin/windows/base/release.htm">here</a>
+<li>Run the .exe file that was just downloaded
+<li>Go to the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download page</a>
+<li>Under <i>Installers</i> select <b>RStudio 1.2.1335 - Windows 7+</b>
+<li>Double click the file to install it
+<li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+</ul>
+
+<p>
+
+</div>
+
+<h3 id="mac">Mac</h3>
+<p>
+Please go through all the installation steps below and make sure that
+you not only installed them, but start them up to make sure they're working.
+
+<div class="row-fluid">
+  <ol>
+<li><b>A word processing program</b>
+<br>For this workshop you will need a word processing program. Many people already have
+Microsoft Word installed, and if you do, you're set!
+<br>
+If you need a word processing program, there are a few other options, like OpenOffice and LibreOffice. Install
+instructions for LibreOffice, which is free and open source, are here.
+       <ul>
+          <li><b>Download the Installer</b>
+        <br>Install LibreOffice by going to the <a href=https://www.libreoffice.org/download/libreoffice-fresh/>installation page</a>. The version for Windows
+should automatically be selected. Click on the button below "Main Installer" <b>Download Version x.y.z</b>. You
+will go to a page that asks about a donation, but you don't need to make one.
+Your download should begin automatically.
+          <li><b>Install LibreOffice</b>
+            <br>Once the installer is downloaded, double click on it and it should install.
+<li>To use LibreOffice, double click on the icon and it will open.
+</ul>
+
+<p>
+
+<li><b>R</b>
+<br>In the workshop, we will use RStudio. RStudio is a nice interface to the
+programming language R. To use RStudio, you need to install both R and RStudio.
+<ul>
+<li>Go to <a href=http://cran.r-project.org>CRAN</a> and click on <i>Download
+R for (Mac) OS X</i>
+<li>Select the .pkg file for the version of OS X that you have and the file
+will download.
+<li>Double click on the file that was downloaded and R will install
+<li>Go to the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download page</a>
+<li>Under <i>Installers</i> select <b>RStudio <em>1.2.1335</em> - Mac OS X 10.12+ (64-bit)</b> to download it.
+<li>Once it's downloaded, double click the file to install it
+<li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+</ul>
+
+<p>
+
+</ol>
+
+</div>
+
+<h3 id="linux">Linux</h3>
+<p>
+Please go through all the installation steps below and make sure that
+you not only installed them, but start them up to make sure they're working.
+
+
+<div class="row-fluid">
+  <ol>
+    <li><b>A word processing program</b>
+      <br>For this workshop you will need a word processing program. LibreOffice comes
+      preinstalled with several Linux distributions. If you don't already have it, use
+      your package manager to install it: (e.g., <code>sudo apt-get install
+	libreoffice</code> for Ubuntu and other Debian-based distributions).
+</ul>
+
+
+
+  <li><b>R</b>
+    <br>In the workshop, we will use RStudio. RStudio is a nice interface to the
+    programming language R. To use RStudio, you need to install both R and RStudio.
+    <ul>
+      <li>Follow the instructions for your distribution
+	from <a href="https://cloud.r-project.org/bin/linux/">CRAN</a>. For most distributions, you
+	can use your package manager (e.g. for Debian/Ubuntu run <code>sudo
+	apt-get install r-base</code>, and for Fedora run <code>sudo yum install
+	R</code>) but make sure that you have at least R 3.6 (as pre-packaged
+	versions might be out of date).
+      <li>To install RStudio, go to
+	the <a href="http://www.rstudio.com/ide/download/desktop">RStudio Download
+	  page</a>
+      <li>Under <i>Installers</i> select the version for your distribution.
+      <li>Once it's downloaded, double click the file to install it (or <code>sudo dpkg
+	  -i rstudio-x.yy.zzz-amd64.deb</code> at the terminal).
+      <li>Once it's installed, open RStudio to make sure it works and you don't get any error messages.
+    </ul>
+
+<p>
+
+</ol>
+
+</div>
