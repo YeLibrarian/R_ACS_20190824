@@ -1,0 +1,48 @@
+---
+title: "QSAR Lab Report"
+author: "Donna Wrublewski"
+date: "August 15, 2019"
+output:
+  word_document: default
+  html_notebook: default
+---
+
+```{r}
+install.packages("knitr")
+library("knitr")
+```
+
+# Purpose
+
+# Introduction
+
+Insert image of substituted benzoic acids.
+
+Insert a link here as well. 
+
+Insert reference?
+
+# Experimental Methods
+
+# Results
+
+## Exploratory Analysis of _pKa_ values
+
+### pKa Values
+
+There are XXX values and the median value is Y.
+(This will be generated code potentially?)
+
+### Plots
+
+Insert code for boxplot and histogram, with titles.
+
+### Outliers
+
+## Model Building Results
+
+Maybe pick 2 of these to discuss here and link?
+
+## Discussion
+
+# References
