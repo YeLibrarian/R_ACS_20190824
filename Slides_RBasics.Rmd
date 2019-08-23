@@ -100,9 +100,9 @@ Tools (and the computing environment needed)
 - Automation
   - e.g. script-based data analysis and writing, version control etc.
 - Documentation
-  - e.g. Readme file, comments in data and scripts, ELN etc.
+  - e.g. Readme file, comments in data and code, ELN etc.
 - Dissemination 
-  - e.g. repositories, persistant identifiers etc.
+  - e.g. repositories, persistant identifiers, open licensing etc.
 
 ## Why R for reproducible research?
 - No lots of pointing and clicking - can re-run the script to reproduce the analysis
