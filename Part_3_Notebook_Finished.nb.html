@@ -7,11 +7,12 @@
 <meta charset="utf-8" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
 <meta name="author" content="Donna Wrublewski" />
 
-<meta name="date" content="2019-08-15" />
+<meta name="date" content="2019-08-24" />
 
 <title>QSAR Lab Report</title>
 
@@ -1713,28 +1714,10 @@ summary {
 }
 </style>
 
-<script>
-$(document).ready(function () {
-  window.buildTabsets("TOC");
-});
-
-$(document).ready(function () {
-  $('.tabset-dropdown > .nav-tabs > li').click(function () {
-    $(this).parent().toggleClass('nav-tabs-open')
-  });
-});
-</script>
-
 <!-- code folding -->
 <style type="text/css">
 .code-folding-btn { margin-bottom: 4px; }
 </style>
-<script>
-$(document).ready(function () {
-  window.initializeSourceEmbed("Part_3_Notebook_Finished.Rmd");
-  window.initializeCodeFolding("show" === "show");
-});
-</script>
 
 
 
@@ -1765,7 +1748,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">QSAR Lab Report</h1>
 <h4 class="author">Donna Wrublewski</h4>
-<h4 class="date">August 15, 2019</h4>
+<h4 class="date">August 24, 2019</h4>
 
 </div>
 
@@ -1773,10 +1756,20 @@ $(document).ready(function () {
 <!-- rnb-text-begin -->
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhcImtuaXRyXCIpXG5saWJyYXJ5KFwia25pdHJcIilcbmBgYCJ9 -->
-<pre class="r"><code>install.packages(&quot;knitr&quot;)
-library(&quot;knitr&quot;)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuaW5zdGFsbC5wYWNrYWdlcyhrbml0cilcbmBgYCJ9 -->
+<pre class="r"><code>install.packages(knitr)</code></pre>
 <!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gaW5zdGFsbC5wYWNrYWdlcyA6IG9iamVjdCAna25pdHInIG5vdCBmb3VuZFxuIn0= -->
+<pre><code>Error in install.packages : object 'knitr' not found</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShrbml0cilcbmBgYCJ9 -->
+<pre class="r"><code>library(knitr)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gdmFsdWVbWzNMXV0oY29uZCkgOiBcbiAgUGFja2FnZSDigJhrbml0cuKAmSB2ZXJzaW9uIDEuMjMgY2Fubm90IGJlIHVubG9hZGVkOlxuIEVycm9yIGluIHVubG9hZE5hbWVzcGFjZShwYWNrYWdlKSA6IG5hbWVzcGFjZSDigJhrbml0cuKAmSBpcyBpbXBvcnRlZCBieSDigJhybWFya2Rvd27igJkgc28gY2Fubm90IGJlIHVubG9hZGVkXG4ifQ== -->
+<pre><code>Error in value[[3L]](cond) : 
+  Package ‘knitr’ version 1.23 cannot be unloaded:
+ Error in unloadNamespace(package) : namespace ‘knitr’ is imported by ‘rmarkdown’ so cannot be unloaded</code></pre>
+<!-- rnb-output-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
 <div id="purpose" class="section level1">
@@ -1784,6 +1777,12 @@ library(&quot;knitr&quot;)</code></pre>
 </div>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
+<p>One focus of Chemical Informatics is to try to predict the behavior of a compound based on its structure. Especially, behavior in a biological system can be very complex and difficult to predict in a simple way. Some examples are:</p>
+<ul>
+<li>drug activity</li>
+<li>drug side effects *environmental toxicity</li>
+</ul>
+<p>These are complex types of behavior and are difficult to predict. One way to approach this problem is known as a QSAR – Quantitative Structure-Activity Relationship. <span class="citation">Peter et al. (2019)</span> The most common approach to QSAR is rather like constructing a Calibration Curve, except that multiple variables are used in building the model. You start with a series of “descriptors” - numbers that describe the structure of the molecule which are easy to compute or measure, for example: MW, solubility, number of hydrogen- bond-donors, dipole moment, and many others. Using these it is possible to build a multiple regression model: an equation to predict the activity of interest:</p>
 <p>Insert image of substituted benzoic acids.</p>
 <p>Insert a link here as well.</p>
 <p>Insert reference?</p>
@@ -1809,22 +1808,63 @@ library(&quot;knitr&quot;)</code></pre>
 </div>
 <div id="model-building-results" class="section level2">
 <h2>Model Building Results</h2>
-<p>Maybe pick 2 of these to discuss here and link?</p>
+<div id="model.all-results-parts-abc-described-below" class="section level3">
+<h3>model.all results [parts a,b,c described below]</h3>
+<p>Give the plot a title and copy it into this report. Use the summary() command to get the coefficients and Multiple R-squared. This also gives you Pr values for all the descriptors – you will need this for Part D.</p>
+<p>What is the equation for this model? e.g. pka = 31563146 + 3554first-descriptor – 2345second-descriptor + ……..</p>
+<p>Discuss how good the fit is, including the Multiple R-squared. (a good fit will have R-squared close to 1.0, the closer the better)</p>
+</div>
+<div id="model.5-results-parts-abc-described-below" class="section level3">
+<h3>model.5 results [parts a,b,c described below]</h3>
+<p>Give the plot a title and copy it into this report. Use the summary() command to get the coefficients and Multiple R-squared. This also gives you Pr values for all the descriptors – you will need this for Part D.</p>
+<p>What is the equation for this model? e.g. pka = 31563146 + 3554first-descriptor – 2345second-descriptor + ……..</p>
+<p>Discuss how good the fit is, including the Multiple R-squared. (a good fit will have R-squared close to 1.0, the closer the better)</p>
+</div>
+<div id="model.2-results-parts-abc-described-below" class="section level3">
+<h3>model.2 results [parts a,b,c described below]</h3>
+<p>Give the plot a title and copy it into this report. Use the summary() command to get the coefficients and Multiple R-squared. This also gives you Pr values for all the descriptors – you will need this for Part D.</p>
+<p>What is the equation for this model? e.g. pka = 31563146 + 3554first-descriptor – 2345second-descriptor + ……..</p>
+<p>Discuss how good the fit is, including the Multiple R-squared. (a good fit will have R-squared close to 1.0, the closer the better)</p>
+</div>
+<div id="model.1-results-parts-abc-described-below" class="section level3">
+<h3>model.1 results [parts a,b,c described below]</h3>
+<p>Give the plot a title and copy it into this report. Use the summary() command to get the coefficients and Multiple R-squared. This also gives you Pr values for all the descriptors – you will need this for Part D.</p>
+<p>What is the equation for this model? e.g. pka = 31563146 + 3554first-descriptor – 2345second-descriptor + ……..</p>
+<p>Discuss how good the fit is, including the Multiple R-squared. (a good fit will have R-squared close to 1.0, the closer the better)</p>
+</div>
 </div>
 <div id="discussion" class="section level2">
 <h2>Discussion</h2>
+<p>3.1 In general, how does the ability of the model to predict the pKa compare as you increase the number of “descriptors” (model.1 → model.2 → model.5 → model.all)? Consider how the plots for the three models look and the Multiple R-squared values for the three models.</p>
+<p>3.2 Statisticians will talk a parsimonious model as being preferred: use the simplest model that gives the best explanation. Given this, how does model.2 compare to the others? Do you think this is an improvement or not? Explain.</p>
+<p>The original dataset had two outliers removed for you. You can’t just ignore data points that you don’t like – there needs to be a valid reason for leaving them out. Consider the chemistry of these molecules. Look closely at the structures of the molecules.</p>
+<p>3.3 For o-Hydroxybenzoic acid the actual pKa is 2.98, but the model predicted a pKa of 3.77. What is the structure of o-Hydroxybenzoic acid?</p>
+<pre><code>Based on the structure, explain why the REAL pKa is lower than the model thinks it is – that is:
+     it is a stronger acid than it “should” be according to the model.
+When this acid ionizes,  the resulting carboxylate ion is more stable that you would think it
+ should be – why?
+
+Note: the meta and para versions do not show this anomalous behavior.</code></pre>
+<p>3.4 For o-Aminobenzoic acid the actual pKa is 4.98, but the model predicted a pKa of 4.09. What is the structure of o-Aminobenzoic acid?</p>
+<pre><code>Based on the structure, explain why the REAL pKa is higher than the model thinks it is.
+It is harder than it “should be” to remove a hydrogen ion from this molecule – explain why.
+
+
+Note: the meta and para versions do not show this anomalous behavior.</code></pre>
+<p>3.5 Since the model is describing the behavior of actual chemical compounds, it is important that the descriptors used in the model make “chemical sense” for the property they are meant to predict. Based on your knowledge of chemistry, why do you think the descriptors in model.2 are the best choices to explain pKa?</p>
 </div>
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>
 <!-- rnb-text-end -->
+<div id="refs" class="references">
+<div id="ref-PETER2019661">
+<p>Peter, Swathik Clarancia, Jaspreet Kaur Dhanjal, Vidhi Malik, Navaneethan Radhakrishnan, Mannu Jayakanthan, and Durai Sundar. 2019. “Quantitative Structure-Activity Relationship (Qsar): Modeling Approaches to Biological Applications.” In <em>Encyclopedia of Bioinformatics and Computational Biology</em>, edited by Shoba Ranganathan, Michael Gribskov, Kenta Nakai, and Christian Schönbach, 661–76. Oxford: Academic Press. <a href="https://doi.org/https://doi.org/10.1016/B978-0-12-809633-8.20197-0">https://doi.org/https://doi.org/10.1016/B978-0-12-809633-8.20197-0</a>.</p>
+</div>
+</div>
 </div>
 
-<<<<<<< HEAD
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUVNBUiBMYWIgUmVwb3J0IgphdXRob3I6ICJEb25uYSBXcnVibGV3c2tpIgpkYXRlOiAiQXVndXN0IDE1LCAyMDE5IgpvdXRwdXQ6CiAgd29yZF9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKLS0tCgojIFB1cnBvc2UKCiMgSW50cm9kdWN0aW9uCgpJbnNlcnQgaW1hZ2Ugb2Ygc3Vic3RpdHV0ZWQgYmVuem9pYyBhY2lkcy4KCiMgRXhwZXJpbWVudGFsIE1ldGhvZHMKCiMgUmVzdWx0cwoKIyMgRXhwbG9yYXRvcnkgQW5hbHlzaXMgb2YgcEthIHZhbHVlcwoKIyMjIHBLYSBWYWx1ZXMKClRoZXJlIGFyZSBYWFggdmFsdWVzIGFuZCB0aGUgbWVkaWFuIHZhbHVlIGlzIFkuCihUaGlzIHdpbGwgYmUgZ2VuZXJhdGVkIGNvZGUgcG90ZW50aWFsbHk/KQoKIyMjIFBsb3RzCgpJbnNlcnQgY29kZSBmb3IgYm94cGxvdCBhbmQgaGlzdG9ncmFtLCB3aXRoIHRpdGxlcy4KCiMjIyBPdXRsaWVycwoKIyMgTW9kZWwgQnVpbGRpbmcgUmVzdWx0cwoKTWF5YmUgcGljayAyIG9mIHRoZXNlIHRvIGRpc2N1c3MgaGVyZSBhbmQgbGluaz8KCiMjIERpc2N1c3Npb24KCiMgUmVmZXJlbmNlcwo=</div>
-=======
-<div id="rmd-source-code">LS0tCnRpdGxlOiAiUVNBUiBMYWIgUmVwb3J0IgphdXRob3I6ICJEb25uYSBXcnVibGV3c2tpIgpkYXRlOiBBdWd1c3QgMTUsIDIwMTkKb3V0cHV0OiBodG1sX25vdGVib29rCi0tLQoKYGBge3J9Cmluc3RhbGwucGFja2FnZXMoImtuaXRyIikKbGlicmFyeSgia25pdHIiKQpgYGAKCiMgUHVycG9zZQoKIyBJbnRyb2R1Y3Rpb24KCkluc2VydCBpbWFnZSBvZiBzdWJzdGl0dXRlZCBiZW56b2ljIGFjaWRzLgoKSW5zZXJ0IGEgbGluayBoZXJlIGFzIHdlbGwuIAoKSW5zZXJ0IHJlZmVyZW5jZT8KCiMgRXhwZXJpbWVudGFsIE1ldGhvZHMKCiMgUmVzdWx0cwoKIyMgRXhwbG9yYXRvcnkgQW5hbHlzaXMgb2YgX3BLYV8gdmFsdWVzCgojIyMgcEthIFZhbHVlcwoKVGhlcmUgYXJlIFhYWCB2YWx1ZXMgYW5kIHRoZSBtZWRpYW4gdmFsdWUgaXMgWS4KKFRoaXMgd2lsbCBiZSBnZW5lcmF0ZWQgY29kZSBwb3RlbnRpYWxseT8pCgojIyMgUGxvdHMKCkluc2VydCBjb2RlIGZvciBib3hwbG90IGFuZCBoaXN0b2dyYW0sIHdpdGggdGl0bGVzLgoKIyMjIE91dGxpZXJzCgojIyBNb2RlbCBCdWlsZGluZyBSZXN1bHRzCgpNYXliZSBwaWNrIDIgb2YgdGhlc2UgdG8gZGlzY3VzcyBoZXJlIGFuZCBsaW5rPwoKIyMgRGlzY3Vzc2lvbgoKIyBSZWZlcmVuY2VzCg==</div>
->>>>>>> e963fce00fc3662d73afa50fe0f78649e3438dea
+<div id="rmd-source-code">LS0tCnRpdGxlOiAiUVNBUiBMYWIgUmVwb3J0IgphdXRob3I6ICJEb25uYSBXcnVibGV3c2tpIgpkYXRlOiAiQXVndXN0IDI0LCAyMDE5IgpvdXRwdXQ6CiAgd29yZF9kb2N1bWVudDogZGVmYXVsdAogIGh0bWxfbm90ZWJvb2s6IGRlZmF1bHQKYmlibGlvZ3JhcGh5OiByZWZlcmVuY2VzLmJpYgotLS0KCmBgYHtyfQppbnN0YWxsLnBhY2thZ2VzKGtuaXRyKQpsaWJyYXJ5KGtuaXRyKQpgYGAKCiMgUHVycG9zZQoKIyBJbnRyb2R1Y3Rpb24KCk9uZSBmb2N1cyBvZiBDaGVtaWNhbCBJbmZvcm1hdGljcyBpcyB0byB0cnkgdG8gcHJlZGljdCB0aGUgYmVoYXZpb3Igb2YgYSBjb21wb3VuZCBiYXNlZCAKb24gaXRzIHN0cnVjdHVyZS4gRXNwZWNpYWxseSwgYmVoYXZpb3IgaW4gYSBiaW9sb2dpY2FsIHN5c3RlbSBjYW4gYmUgdmVyeSBjb21wbGV4IGFuZCAKZGlmZmljdWx0IHRvIHByZWRpY3QgaW4gYSBzaW1wbGUgd2F5LiBTb21lIGV4YW1wbGVzIGFyZToKCiogZHJ1ZyBhY3Rpdml0eQoqIGRydWcgc2lkZSBlZmZlY3RzCiplbnZpcm9ubWVudGFsIHRveGljaXR5CgpUaGVzZSBhcmUgY29tcGxleCB0eXBlcyBvZiBiZWhhdmlvciBhbmQgYXJlIGRpZmZpY3VsdCB0byBwcmVkaWN0LiBPbmUgd2F5IHRvIGFwcHJvYWNoIAp0aGlzIHByb2JsZW0gaXMga25vd24gYXMgYSBRU0FSIOKAkyBRdWFudGl0YXRpdmUgU3RydWN0dXJlLUFjdGl2aXR5IFJlbGF0aW9uc2hpcC4gQFBFVEVSMjAxOTY2MSBUaGUgbW9zdCAKY29tbW9uIGFwcHJvYWNoIHRvIFFTQVIgaXMgcmF0aGVyIGxpa2UgY29uc3RydWN0aW5nIGEgQ2FsaWJyYXRpb24gQ3VydmUsIGV4Y2VwdCB0aGF0IAptdWx0aXBsZSB2YXJpYWJsZXMgYXJlIHVzZWQgaW4gYnVpbGRpbmcgdGhlIG1vZGVsLiBZb3Ugc3RhcnQgd2l0aCBhIHNlcmllcyBvZiAK4oCcZGVzY3JpcHRvcnPigJ0gLSBudW1iZXJzIHRoYXQgZGVzY3JpYmUgdGhlIHN0cnVjdHVyZSBvZiB0aGUKbW9sZWN1bGUgd2hpY2ggYXJlIGVhc3kgdG8gY29tcHV0ZSBvciBtZWFzdXJlLCBmb3IgZXhhbXBsZTogTVcsIHNvbHViaWxpdHksIG51bWJlciBvZiAKaHlkcm9nZW4tIGJvbmQtZG9ub3JzLCBkaXBvbGUgbW9tZW50LCBhbmQgbWFueSBvdGhlcnMuIFVzaW5nIHRoZXNlIGl0IGlzIHBvc3NpYmxlIHRvIApidWlsZCBhIG11bHRpcGxlIHJlZ3Jlc3Npb24gbW9kZWw6IGFuIGVxdWF0aW9uIHRvIHByZWRpY3QgdGhlIGFjdGl2aXR5IG9mIGludGVyZXN0OgoKCkluc2VydCBpbWFnZSBvZiBzdWJzdGl0dXRlZCBiZW56b2ljIGFjaWRzLgoKSW5zZXJ0IGEgbGluayBoZXJlIGFzIHdlbGwuIAoKSW5zZXJ0IHJlZmVyZW5jZT8KCiMgRXhwZXJpbWVudGFsIE1ldGhvZHMKCiMgUmVzdWx0cwoKIyMgRXhwbG9yYXRvcnkgQW5hbHlzaXMgb2YgX3BLYV8gdmFsdWVzCgojIyMgcEthIFZhbHVlcwoKVGhlcmUgYXJlIFhYWCB2YWx1ZXMgYW5kIHRoZSBtZWRpYW4gdmFsdWUgaXMgWS4KKFRoaXMgd2lsbCBiZSBnZW5lcmF0ZWQgY29kZSBwb3RlbnRpYWxseT8pCgojIyMgUGxvdHMKCkluc2VydCBjb2RlIGZvciBib3hwbG90IGFuZCBoaXN0b2dyYW0sIHdpdGggdGl0bGVzLgoKIyMjIE91dGxpZXJzCgojIyBNb2RlbCBCdWlsZGluZyBSZXN1bHRzCgojIyMgIG1vZGVsLmFsbCByZXN1bHRzIFtwYXJ0cyBhLGIsYyBkZXNjcmliZWQgYmVsb3ddCgpHaXZlIHRoZSBwbG90IGEgdGl0bGUgYW5kIGNvcHkgaXQgaW50byB0aGlzIHJlcG9ydC4KVXNlIHRoZSBzdW1tYXJ5KCkgY29tbWFuZCB0byBnZXQgdGhlIGNvZWZmaWNpZW50cyBhbmQgTXVsdGlwbGUgUi1zcXVhcmVkLiAKVGhpcyBhbHNvIGdpdmVzIHlvdSBQciB2YWx1ZXMgZm9yIGFsbCB0aGUgZGVzY3JpcHRvcnMg4oCTIHlvdSB3aWxsIG5lZWQgdGhpcyBmb3IgUGFydCBELgoKV2hhdCBpcyB0aGUgZXF1YXRpb24gZm9yIHRoaXMgbW9kZWw/CmUuZy4gIHBrYSA9IDMxNTYzMTQ2ICArIDM1NTRmaXJzdC1kZXNjcmlwdG9yIOKAkyAyMzQ1c2Vjb25kLWRlc2NyaXB0b3IgKyDigKbigKYuLgoKRGlzY3VzcyBob3cgZ29vZCB0aGUgZml0IGlzLCBpbmNsdWRpbmcgdGhlIE11bHRpcGxlIFItc3F1YXJlZC4KKGEgZ29vZCBmaXQgd2lsbCBoYXZlIFItc3F1YXJlZCBjbG9zZSB0byAxLjAsIHRoZSBjbG9zZXIgdGhlIGJldHRlcikKCiMjIyAgbW9kZWwuNSByZXN1bHRzICBbcGFydHMgYSxiLGMgZGVzY3JpYmVkIGJlbG93XQoKR2l2ZSB0aGUgcGxvdCBhIHRpdGxlIGFuZCBjb3B5IGl0IGludG8gdGhpcyByZXBvcnQuClVzZSB0aGUgc3VtbWFyeSgpIGNvbW1hbmQgdG8gZ2V0IHRoZSBjb2VmZmljaWVudHMgYW5kIE11bHRpcGxlIFItc3F1YXJlZC4gClRoaXMgYWxzbyBnaXZlcyB5b3UgUHIgdmFsdWVzIGZvciBhbGwgdGhlIGRlc2NyaXB0b3JzIOKAkyB5b3Ugd2lsbCBuZWVkIHRoaXMgZm9yIFBhcnQgRC4KCldoYXQgaXMgdGhlIGVxdWF0aW9uIGZvciB0aGlzIG1vZGVsPwplLmcuICBwa2EgPSAzMTU2MzE0NiAgKyAzNTU0Zmlyc3QtZGVzY3JpcHRvciDigJMgMjM0NXNlY29uZC1kZXNjcmlwdG9yICsg4oCm4oCmLi4KCkRpc2N1c3MgaG93IGdvb2QgdGhlIGZpdCBpcywgaW5jbHVkaW5nIHRoZSBNdWx0aXBsZSBSLXNxdWFyZWQuCihhIGdvb2QgZml0IHdpbGwgaGF2ZSBSLXNxdWFyZWQgY2xvc2UgdG8gMS4wLCB0aGUgY2xvc2VyIHRoZSBiZXR0ZXIpCgojIyMgIG1vZGVsLjIgcmVzdWx0cyBbcGFydHMgYSxiLGMgZGVzY3JpYmVkIGJlbG93XQoKR2l2ZSB0aGUgcGxvdCBhIHRpdGxlIGFuZCBjb3B5IGl0IGludG8gdGhpcyByZXBvcnQuClVzZSB0aGUgc3VtbWFyeSgpIGNvbW1hbmQgdG8gZ2V0IHRoZSBjb2VmZmljaWVudHMgYW5kIE11bHRpcGxlIFItc3F1YXJlZC4gClRoaXMgYWxzbyBnaXZlcyB5b3UgUHIgdmFsdWVzIGZvciBhbGwgdGhlIGRlc2NyaXB0b3JzIOKAkyB5b3Ugd2lsbCBuZWVkIHRoaXMgZm9yIFBhcnQgRC4KCldoYXQgaXMgdGhlIGVxdWF0aW9uIGZvciB0aGlzIG1vZGVsPwplLmcuICBwa2EgPSAzMTU2MzE0NiAgKyAzNTU0Zmlyc3QtZGVzY3JpcHRvciDigJMgMjM0NXNlY29uZC1kZXNjcmlwdG9yICsg4oCm4oCmLi4KCkRpc2N1c3MgaG93IGdvb2QgdGhlIGZpdCBpcywgaW5jbHVkaW5nIHRoZSBNdWx0aXBsZSBSLXNxdWFyZWQuCihhIGdvb2QgZml0IHdpbGwgaGF2ZSBSLXNxdWFyZWQgY2xvc2UgdG8gMS4wLCB0aGUgY2xvc2VyIHRoZSBiZXR0ZXIpCgojIyMgIG1vZGVsLjEgcmVzdWx0cyBbcGFydHMgYSxiLGMgZGVzY3JpYmVkIGJlbG93XQoKR2l2ZSB0aGUgcGxvdCBhIHRpdGxlIGFuZCBjb3B5IGl0IGludG8gdGhpcyByZXBvcnQuClVzZSB0aGUgc3VtbWFyeSgpIGNvbW1hbmQgdG8gZ2V0IHRoZSBjb2VmZmljaWVudHMgYW5kIE11bHRpcGxlIFItc3F1YXJlZC4gClRoaXMgYWxzbyBnaXZlcyB5b3UgUHIgdmFsdWVzIGZvciBhbGwgdGhlIGRlc2NyaXB0b3JzIOKAkyB5b3Ugd2lsbCBuZWVkIHRoaXMgZm9yIFBhcnQgRC4KCldoYXQgaXMgdGhlIGVxdWF0aW9uIGZvciB0aGlzIG1vZGVsPwplLmcuICBwa2EgPSAzMTU2MzE0NiAgKyAzNTU0Zmlyc3QtZGVzY3JpcHRvciDigJMgMjM0NXNlY29uZC1kZXNjcmlwdG9yICsg4oCm4oCmLi4KCkRpc2N1c3MgaG93IGdvb2QgdGhlIGZpdCBpcywgaW5jbHVkaW5nIHRoZSBNdWx0aXBsZSBSLXNxdWFyZWQuCihhIGdvb2QgZml0IHdpbGwgaGF2ZSBSLXNxdWFyZWQgY2xvc2UgdG8gMS4wLCB0aGUgY2xvc2VyIHRoZSBiZXR0ZXIpCgojIyBEaXNjdXNzaW9uCgozLjEgIEluIGdlbmVyYWwsIGhvdyBkb2VzIHRoZSBhYmlsaXR5IG9mIHRoZSBtb2RlbCB0byBwcmVkaWN0IHRoZSBwS2EgY29tcGFyZSBhcyB5b3UgaW5jcmVhc2UgdGhlIG51bWJlciBvZiDigJxkZXNjcmlwdG9yc+KAnSAobW9kZWwuMSDihpIgbW9kZWwuMiAg4oaSIG1vZGVsLjUg4oaSIG1vZGVsLmFsbCk/ICBDb25zaWRlciBob3cgdGhlIHBsb3RzIGZvciB0aGUgdGhyZWUgbW9kZWxzIGxvb2sgYW5kIHRoZSBNdWx0aXBsZSBSLXNxdWFyZWQgdmFsdWVzIGZvciB0aGUgdGhyZWUgbW9kZWxzLgoKMy4yICBTdGF0aXN0aWNpYW5zIHdpbGwgdGFsayBhIHBhcnNpbW9uaW91cyBtb2RlbCBhcyBiZWluZyBwcmVmZXJyZWQ6ICB1c2UgdGhlIHNpbXBsZXN0IG1vZGVsIHRoYXQgZ2l2ZXMgdGhlIGJlc3QgZXhwbGFuYXRpb24uICBHaXZlbiB0aGlzLCBob3cgZG9lcyBtb2RlbC4yIGNvbXBhcmUgdG8gdGhlIG90aGVycz8gIERvIHlvdSB0aGluayB0aGlzIGlzIGFuIGltcHJvdmVtZW50IG9yIG5vdD8gRXhwbGFpbi4KCgoKVGhlIG9yaWdpbmFsIGRhdGFzZXQgaGFkIHR3byBvdXRsaWVycyByZW1vdmVkIGZvciB5b3UuICBZb3UgY2FuJ3QganVzdCBpZ25vcmUgZGF0YSBwb2ludHMgdGhhdCB5b3UgZG9uJ3QgbGlrZSDigJMgdGhlcmUgbmVlZHMgdG8gYmUgYSB2YWxpZCByZWFzb24gZm9yIGxlYXZpbmcgdGhlbSBvdXQuICBDb25zaWRlciB0aGUgY2hlbWlzdHJ5IG9mIHRoZXNlIG1vbGVjdWxlcy4gIExvb2sgY2xvc2VseSBhdCB0aGUgc3RydWN0dXJlcyBvZiB0aGUgbW9sZWN1bGVzLgoKMy4zICBGb3Igby1IeWRyb3h5YmVuem9pYyBhY2lkIHRoZSBhY3R1YWwgcEthIGlzIDIuOTgsIGJ1dCB0aGUgbW9kZWwgcHJlZGljdGVkIGEgcEthIG9mIDMuNzcuCglXaGF0IGlzIHRoZSBzdHJ1Y3R1cmUgb2YgIG8tSHlkcm94eWJlbnpvaWMgYWNpZD8KCglCYXNlZCBvbiB0aGUgc3RydWN0dXJlLCBleHBsYWluIHdoeSB0aGUgUkVBTCBwS2EgaXMgbG93ZXIgdGhhbiB0aGUgbW9kZWwgdGhpbmtzIGl0IGlzIOKAkyB0aGF0IGlzOgoJCSBpdCBpcyBhIHN0cm9uZ2VyIGFjaWQgdGhhbiBpdCDigJxzaG91bGTigJ0gYmUgYWNjb3JkaW5nIHRvIHRoZSBtb2RlbC4KCVdoZW4gdGhpcyBhY2lkIGlvbml6ZXMsICB0aGUgcmVzdWx0aW5nIGNhcmJveHlsYXRlIGlvbiBpcyBtb3JlIHN0YWJsZSB0aGF0IHlvdSB3b3VsZCB0aGluayBpdAoJIHNob3VsZCBiZSDigJMgd2h5PwoKCU5vdGU6IHRoZSBtZXRhIGFuZCBwYXJhIHZlcnNpb25zIGRvIG5vdCBzaG93IHRoaXMgYW5vbWFsb3VzIGJlaGF2aW9yLgoKMy40ICBGb3Igby1BbWlub2JlbnpvaWMgYWNpZCB0aGUgYWN0dWFsIHBLYSBpcyA0Ljk4LCBidXQgdGhlIG1vZGVsIHByZWRpY3RlZCBhIHBLYSBvZiA0LjA5LgoJV2hhdCBpcyB0aGUgc3RydWN0dXJlIG9mICBvLUFtaW5vYmVuem9pYyBhY2lkPwoKCUJhc2VkIG9uIHRoZSBzdHJ1Y3R1cmUsIGV4cGxhaW4gd2h5IHRoZSBSRUFMIHBLYSBpcyBoaWdoZXIgdGhhbiB0aGUgbW9kZWwgdGhpbmtzIGl0IGlzLgoJSXQgaXMgaGFyZGVyIHRoYW4gaXQg4oCcc2hvdWxkIGJl4oCdIHRvIHJlbW92ZSBhIGh5ZHJvZ2VuIGlvbiBmcm9tIHRoaXMgbW9sZWN1bGUg4oCTIGV4cGxhaW4gd2h5LgoKCglOb3RlOiB0aGUgbWV0YSBhbmQgcGFyYSB2ZXJzaW9ucyBkbyBub3Qgc2hvdyB0aGlzIGFub21hbG91cyBiZWhhdmlvci4KCjMuNSAgU2luY2UgdGhlIG1vZGVsIGlzIGRlc2NyaWJpbmcgdGhlIGJlaGF2aW9yIG9mIGFjdHVhbCBjaGVtaWNhbCBjb21wb3VuZHMsIGl0IGlzIGltcG9ydGFudCB0aGF0IHRoZSBkZXNjcmlwdG9ycyB1c2VkIGluIHRoZSBtb2RlbCBtYWtlICJjaGVtaWNhbCBzZW5zZSIgZm9yIHRoZSBwcm9wZXJ0eSB0aGV5IGFyZSBtZWFudCB0byBwcmVkaWN0LiBCYXNlZCBvbiB5b3VyIGtub3dsZWRnZSBvZiBjaGVtaXN0cnksIHdoeSBkbyB5b3UgdGhpbmsgdGhlIGRlc2NyaXB0b3JzIGluIG1vZGVsLjIgYXJlIHRoZSBiZXN0IGNob2ljZXMgdG8gZXhwbGFpbiBwS2E/CgoKIyBSZWZlcmVuY2VzCg==</div>
 
 
 
@@ -1853,6 +1893,29 @@ $(document).ready(function () {
 });
 
 </script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open')
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeSourceEmbed("Part_3_Notebook_Finished.Rmd");
+  window.initializeCodeFolding("show" === "show");
+});
+</script>
+
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>
