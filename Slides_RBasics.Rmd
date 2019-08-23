@@ -1,13 +1,13 @@
 ---
 title: "Reproducible Data Analysis and Publishing in Chemistry with R"
-subtitle: 'Part I: R Basics'
+subtitle: 'Pre-ACS Workshop, San Diego, CA'
 author: "Ye Li, Steve Wathen, Donna Wrublewski and Carpentries contributors" 
 date: "8/24/2019"
 output:
   ioslides_presentation:
     css: slides_style.css
     widescreen: yes
-    incremental: false
+    incremental: true
     smaller: false
   slidy_presentation: default
 
@@ -20,9 +20,10 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Welcome
 - Restrooms
 - Wireless internet connection
-- Pre-workshop survey
+- Pre-workshop survey https://forms.gle/wjKkYmZR1xHeYUot9 
 - Please accept the invitation from RStudio Cloud and create an account if you have not
 - Open group note-taking http://bit.ly/notesRChem 
+- Link to slides 
 
 ## Acknowledgement
 
@@ -39,7 +40,6 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Agenda
 - Test technical setup 
 - Learn R Basics 
-  - Plot a calibration curve
 - Apply R to a QSAR mini-project
 - Write a report with R Markdown 
 
@@ -63,6 +63,17 @@ Hot pinky note means stop                    Blue note means go
   - plotting a calibrarion curve
 - Getting help
 
+## Reproduciblity in Chemistry {#chem}
+- Source of Irreproducibility
+  - Rarely deliberate falsification
+  - Unconscious investigator bias
+    - Incorrect data or modified results to fit their preconceptions
+  - *bona fide* results that's difficult to repeat
+
+![](images/Repro_Chem.png)  
+https://doi.org/10.1002/anie.201606591 
+
+
 ## NASEM Consensus Report defined Reproduciblity as Computational Reproducibility | May 2019 {#report}
 
 <div class="columns-2">
@@ -83,6 +94,26 @@ All data
 Software source codes or scripts for analysis
 Tools (and the computing environment needed)
 
+## Facets for Reproducible Research Workflow
+- Organization
+  - e.g. folder structure, naming convention, bundle computing environment etc.
+- Automation
+  - e.g. script-based data analysis and writing, version control etc.
+- Documentation
+  - e.g. Readme file, comments in data and scripts, ELN etc.
+- Dissemination 
+  - e.g. repositories, persistant identifiers etc.
+
+## Why R for reproducible research?
+- No lots of pointing and clicking - can re-run the script to reproduce the analysis
+- Integrating with other tools to generate (and re-generate) your manuscript, for version control and dissemination 
+- Interdisciplinary and extensible
+- Working on data of all shapes and sizes
+- Producing high-quality graphics
+- Large and welcoming community
+  - Stack Overflow(https://stackoverflow.com/)
+  - RStudio Community(https://community.rstudio.com/))
+- Open-source and cross-platform 
 
 ## Automated and open workflow is good for reproducibility {#logos}
 
@@ -91,6 +122,8 @@ Open Tools                         What is it?
 ![](images/RLogo.png)              Programming language and the software that interprets the scripts 
 ![](images/RStudioLogo.png)        Integrated Development Environment (IDE) Popular way to write R scripts and interact with the R software
 ![](images/RStudioCloudLogo.png)   A managed cloud instance of RStudio. Good for teaching and learning
+
+
 
 ## RStudio / RStudio Cloud Interface {#interface}
 - All info needed to write code in a single window
@@ -117,7 +150,7 @@ Open Tools                         What is it?
 - **'data_output/'**: use this folder to save data files you obtained using scripts
 - **'documents/'**: use this folder for your outlines, drafts, and other texts
 - Practice: in **RStudio Cloud** / Student In-Class Practices
-  - Use 'New Folder' button in the right bottom Files section to create a solder called 'documents'
+  - Use 'New Folder' button in the right bottom Files section to create a folder called 'documents'
  
 
 ## Project management in R | Working directory
@@ -135,11 +168,19 @@ Open Tools                         What is it?
   - Calibration curve example 
 - Subset data frames 
 - Save data output
-- Plot figures and linear fit 
+- Plot figure and linear fit 
 - Save plotted figures
 
 ## Getting Help
-
+- I know the name of the function I want to use, but I’m not sure how to use it
+  - e.g. ?plot, args(lm)
+- I want to use a function that does X, there must be a function for it but I don’t know which one…
+  - e.g. ??color  (call help.search() function)
+- I am stuck… I get an error message that I don’t understand
+  - e.g. Google, search stockoverflow.com with the tag [r] 
+  - Include computing environment info when asking questions - session.info()   
+  
+  
 ## Apply R for a QSAR mini-project
 
 

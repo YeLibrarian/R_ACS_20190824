@@ -6,8 +6,11 @@
 
 }
 
-#report
-img {
+#chem img {
+  width: 500px;
+}
+
+#report img {
   width: 250px;
 }
 
