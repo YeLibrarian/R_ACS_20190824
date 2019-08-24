@@ -13,8 +13,6 @@ library("knitr")
 benzoate <- read.delim("./data/benzoate.txt", row.names=1)
 ```
 
-# Purpose
-
 # Introduction
 
 One focus of Chemical Informatics is to try to predict the behavior of a compound based 
@@ -89,7 +87,7 @@ kable(benzoate, caption="Raw pKa Data")
 ### Plots
 
 ```{r boxplot}
-boxplot(benzoate$pka, ylab="pKa values")
+boxplot(benzoate$pka, main="Spread of pKa Values", ylab="pKa values")
 ```
 
 ```{r pKa_histogram}
