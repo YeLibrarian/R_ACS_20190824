@@ -20,6 +20,8 @@ knitr::opts_chunk$set(echo = FALSE)
 ## Welcome
 - Restrooms
 - Wireless internet connection
+  - OMNI Meeting, Passowrd: ACS
+  - **Important** Please use it for your laptop only and for the workshop only to avoid us going beyond allocated spots
 - Pre-workshop survey https://forms.gle/wjKkYmZR1xHeYUot9 
 - Please accept the invitation from RStudio Cloud and create an account if you have not
 - Open group note-taking http://bit.ly/notesRChem 
