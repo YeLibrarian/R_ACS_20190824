@@ -224,11 +224,14 @@ y =  slope * x + intercept
 **Generate an equation to predict the pKa of substituted benzoic acids based on a set of 8 descriptors, and then reduce the number of variables to the simplest equation that gives the best fit.**
 
 
-## R Markdown
+## R Markdown - Formatting
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Use the hash '#' to designate headers. Multiple hashes will create subheadings.
+Be sure to leave a space between the hash and text for R Markdown to recognize a heading!
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+Use a single asterisk * or underscore _ to make something _italic_.
+Use double asterisks ** or underscores __ to make something **bold**.
+
 
 ## Learning Resources
 
