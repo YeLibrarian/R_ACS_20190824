@@ -192,6 +192,36 @@ Some examples are:
 * drug side effects
 * environmental toxicity
 
+## QSAR Modeling Using Descriptors
+
+Basic approach:
+
+1. Property to predict
+2. Series of "descriptors" - numbers that describe the structure of the molecule which are easy to compute or measure, such as:
+    * molecular weight
+    * solubility
+    * number of hydrogen-bond-donors
+    * dipole moment
+    
+## QSAR Modeling Using Descriptors
+
+Using these descriptors, it is possible to build a _multiple regression model_, an equation to predict the activity of interest:
+
+`
+activity = intercept + (const1) * (descriptor1) + (const2) * (descriptor2) + (const3) * (descriptor3) ...
+`
+
+In this case, the “activity” represents the Dependent variable (also called the Response variable) and the “descriptors” represent multiple Independent variables (also called Explanatory variables).  
+
+This equation is an expansion of the standard formula for a straight line:
+
+`
+y =  slope * x + intercept
+`
+
+## QSAR Exercise
+
+**Generate an equation to predict the pKa of substituted benzoic acids based on a set of 8 descriptors, and then reduce the number of variables to the simplest equation that gives the best fit.**
 
 
 ## R Markdown
