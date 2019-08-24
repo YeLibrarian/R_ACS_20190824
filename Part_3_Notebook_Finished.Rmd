@@ -82,6 +82,10 @@ molar refractivity which has to do with the polarizability of the molecule.
 
 There are `r length(benzoate$pka)` values and the median value is `r median(benzoate$pka)`.
 
+``` {r echo=FALSE, results = 'asis'}
+kable(benzoate, caption="Raw pKa Data")
+```
+
 ### Plots
 
 ```{r boxplot}
