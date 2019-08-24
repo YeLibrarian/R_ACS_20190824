@@ -73,10 +73,6 @@ There are three other descriptors as well: TPSA describes the total polar surfac
 of the molecule, logP describes its solubility in water versus in octanol, and MR is the 
 molar refractivity which has to do with the polarizability of the molecule.
 
-Insert a link here as well. 
-
-# Experimental Methods
-
 # Results
 
 ## Exploratory Analysis of _pKa_ values
@@ -150,7 +146,7 @@ Consider how the plots for the three models look and the Multiple R-squared valu
 the three models.
 
 3.2  Statisticians will talk a parsimonious model as being preferred:  use the simplest 
-model that gives the best explanation.  Given this, how does model.2 compare to the 
+model that gives the best explanation. Given this, how does model.2 compare to the 
 others?  Do you think this is an improvement or not? Explain.
 
 The original dataset had two outliers removed for you. You can't just ignore data points 
