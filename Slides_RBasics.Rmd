@@ -252,17 +252,6 @@ Use a single asterisk * or underscore _ around words to make them _italic_.
 Use double asterisks ** or underscores __ around wqords to make them **bold**.
 Use a single backtick ` sround words to make them `computational`.
 
-## R Markdown - Code Chunks
-
-Embed a code chunk in an R Markdown document by surrounding the chunk with triple backticks - ```
-
-Example:
-`
-``` {r this_is_a_code_chunk}
-boxplot(benzoate$pka)
-```
-`
-
 ## Learning Resources
 
 - Carpentries Lessons https://carpentries.org/ 
