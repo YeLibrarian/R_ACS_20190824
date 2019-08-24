@@ -179,9 +179,19 @@ Open Tools                         What is it?
 - I am stuck… I get an error message that I don’t understand
   - e.g. Google, search stockoverflow.com with the tag [r] 
   - Include computing environment info when asking questions - session.info()   
-  
-  
-## Apply R for a QSAR mini-project
+
+## QSAR Analysis Using R
+
+Quantitative Structure-Activity Relationship (QSAR) can be used to predict the behavior 
+of a compound based on its structure. In particular, behavior in a biological system can 
+be very complex and difficult to predict in a simple way.
+
+Some examples are:
+
+* drug activity
+* drug side effects
+* environmental toxicity
+
 
 
 ## R Markdown
