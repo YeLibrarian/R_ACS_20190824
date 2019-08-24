@@ -10,6 +10,7 @@ bibliography: references.bib
 
 ```{r echo=FALSE}
 library("knitr")
+benzoate <- read.delim("./data/benzoate.txt", row.names=1)
 ```
 
 # Purpose
@@ -79,22 +80,42 @@ molar refractivity which has to do with the polarizability of the molecule.
 
 ### pKa Values
 
-There are XXX values and the median value is Y.
-(This will be generated code potentially?)
+There are `r length(benzoate$pka)` values and the median value is `r median(benzoate$pka)`.
 
 ### Plots
 
-Insert code for boxplot and histogram, with titles.
+```{r boxplot}
+boxplot(benzoate$pka, ylab="pKa values")
+```
+
+```{r pKa_histogram}
+hist(benzoate$pka, main="Distribution of pKa Values", xlab="pKa Values")
+```
 
 ### Outliers
+
+Based on the boxplot, are there any outliers in your pKa values? Which one?
+Look at your plot for model.2 – is this outlier a problem?  Should we leave it in or 
+remove it from the model.  Explain your reasons.
 
 ## Model Building Results
 
 ###  model.all results
 
 Give the plot a title and copy it into this report.
+
+```{r}
+model.all <- lm(pka ~ . , data=benzoate)
+plot(benzoate$pka, fitted(model.all), main="This is the title", xlab="Observed pKa", ylab="Predicted pKa")
+abline(a=0, b=1)
+```
+
 Use the summary() command to get the coefficients and Multiple R-squared. 
 This also gives you Pr values for all the descriptors – you will need this for Part D.
+
+```{r}
+summary(model.all)
+```
 
 What is the equation for this model?
 e.g.  pka = 31563146  + 3554first-descriptor – 2345second-descriptor + ……..
@@ -105,8 +126,18 @@ Discuss how good the fit is, including the Multiple R-squared.
 ###  model.5 results
 
 Give the plot a title and copy it into this report.
+
+```{r}
+model.5 <- lm(pka ~  sigma.p + sigma.m + ortho + tpsa + logp,  data=benzoate)
+plot(benzoate$pka, fitted(model.5), main="This is the title", xlab="Observed pKa", ylab="Predicted pKa")
+```
+
 Use the summary() command to get the coefficients and Multiple R-squared. 
 This also gives you Pr values for all the descriptors – you will need this for Part D.
+
+```{r}
+summary(model.5)
+```
 
 What is the equation for this model?
 e.g.  pka = 31563146  + 3554first-descriptor – 2345second-descriptor + ……..
@@ -140,12 +171,14 @@ Discuss how good the fit is, including the Multiple R-squared.
 
 ## Discussion
 
-3.1  In general, how does the ability of the model to predict the pKa compare as you 
+3.1
+In general, how does the ability of the model to predict the pKa compare as you 
 increase the number of “descriptors” (model.1 → model.2  → model.5 → model.all)?  
 Consider how the plots for the three models look and the Multiple R-squared values for 
 the three models.
 
-3.2  Statisticians will talk a parsimonious model as being preferred:  use the simplest 
+3.2
+Statisticians will talk a parsimonious model as being preferred:  use the simplest 
 model that gives the best explanation. Given this, how does model.2 compare to the 
 others?  Do you think this is an improvement or not? Explain.
 
@@ -153,7 +186,8 @@ The original dataset had two outliers removed for you. You can't just ignore dat
 that you don't like – there needs to be a valid reason for leaving them out. Consider 
 the chemistry of these molecules.  Look closely at the structures of the molecules.
 
-3.3  For o-Hydroxybenzoic acid the actual pKa is 2.98, but the model predicted a pKa of 
+3.3 
+For _o_-Hydroxybenzoic acid the actual pKa is 2.98, but the model predicted a pKa of 
 3.77. What is the structure of _o_-hydroxybenzoic acid? Based on the structure, explain 
 why the REAL pKa is lower than the model thinks it is – that is: it is a stronger acid than it “should” be according to the model. When this acid ionizes, the resulting carboxylate ion is more stable that you would think it should be – why?
 Note: the _meta_ and _para_ versions do not show this anomalous behavior.
@@ -166,7 +200,11 @@ It is harder than it “should be” to remove a hydrogen ion from this molecule
 why.
 Note: the meta and para versions do not show this anomalous behavior.
 
-3.5  Since the model is describing the behavior of actual chemical compounds, it is important that the descriptors used in the model make "chemical sense" for the property they are meant to predict. Based on your knowledge of chemistry, why do you think the descriptors in model.2 are the best choices to explain pKa?
+3.5
+Since the model is describing the behavior of actual chemical compounds, it is important 
+that the descriptors used in the model make "chemical sense" for the property they are 
+meant to predict. Based on your knowledge of chemistry, why do you think the descriptors 
+in model.2 are the best choices to explain pKa?
 
 # References
 
