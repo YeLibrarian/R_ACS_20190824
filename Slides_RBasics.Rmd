@@ -250,9 +250,9 @@ y =  slope * x + intercept
 Use the hash '#' to designate headers. Multiple hashes will create subheadings.
 Be sure to leave a space between the hash and text for R Markdown to recognize a heading!
 
-Use a single asterisk * or underscore _ to make something _italic_.
-Use double asterisks ** or underscores __ to make something **bold**.
-
+Use a single asterisk * or underscore _ around words to make them _italic_.
+Use double asterisks ** or underscores __ around wqords to make them **bold**.
+Use a single backtick ` sround words to make them `computational`.
 
 ## Learning Resources
 
