@@ -7,8 +7,4 @@ hostUrl: rpubs.com
 appId: https://api.rpubs.com/api/v1/document/521822/9e5297243d694a5dbe51a421564f4c9c
 bundleId: https://api.rpubs.com/api/v1/document/521822/9e5297243d694a5dbe51a421564f4c9c
 url: http://rpubs.com/YeLibrarian/521822
-<<<<<<< HEAD
-when: 1566661552.90053
-=======
-when: 1566660557.04082
->>>>>>> 2ca42779059634585e901730b1c01dc214501060
+when: 1566662190.05144
