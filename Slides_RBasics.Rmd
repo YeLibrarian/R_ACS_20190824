@@ -100,9 +100,9 @@ Tools (and the computing environment needed)
 - Automation
   - e.g. script-based data analysis and writing, version control etc.
 - Documentation
-  - e.g. Readme file, comments in data and scripts, ELN etc.
+  - e.g. Readme file, comments in data and code, ELN etc.
 - Dissemination 
-  - e.g. repositories, persistant identifiers etc.
+  - e.g. repositories, persistant identifiers, open licensing etc.
 
 ## Why R for reproducible research?
 - No lots of pointing and clicking - can re-run the script to reproduce the analysis
@@ -190,11 +190,13 @@ This is an R Markdown presentation. Markdown is a simple formatting syntax for a
 
 When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
 
-## Slide with Bullets
+## Learning Resources
 
-- Bullet 1
-- Bullet 2
-- Bullet 3
+- Carpentries Lessons https://carpentries.org/ 
+  - R for Reproducible Scientific Analysis http://swcarpentry.github.io/r-novice-gapminder/ 
+  - Data Analysis and Visualization for Ecologist https://datacarpentry.org/R-ecology-lesson/ 
+- RStudio Cloud Primers
+- Coursera - Data Science Specialization https://www.coursera.org/specializations/jhu-data-science 
 
 ## Slide with R Output
 
