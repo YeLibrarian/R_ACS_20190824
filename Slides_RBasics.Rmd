@@ -73,6 +73,25 @@ Hot pinky note means stop                    Blue note means go
 ![](images/Repro_Chem.png)  
 https://doi.org/10.1002/anie.201606591 
 
+## Factors causing irreproducible results | Nature Reproducibility Survey 2017 {#Nature}
+<div class="columns-2">
+- Selective reporting
+- Not robust enough for replicating
+- Flawed statistical methods / analysis
+- Insufficient / missing protocols / methods
+- Raw data not available
+- Poor experimental design 
+- Fraud
+- Insufficient peer review
+- Variability of reagents
+
+
+![ https://doi.org/10.6084/m9.figshare.6139937.v4](images/NatureSourceRepr.png)  
+ 
+
+</div>
+
+
 
 ## NASEM Consensus Report defined Reproduciblity as Computational Reproducibility | May 2019 {#report}
 
