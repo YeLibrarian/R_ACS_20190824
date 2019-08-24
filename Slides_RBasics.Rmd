@@ -198,16 +198,59 @@ Open Tools                         What is it?
 - I am stuck… I get an error message that I don’t understand
   - e.g. Google, search stockoverflow.com with the tag [r] 
   - Include computing environment info when asking questions - session.info()   
-  
-  
-## Apply R for a QSAR mini-project
+
+## QSAR Analysis Using R
+
+Quantitative Structure-Activity Relationship (QSAR) can be used to predict the behavior 
+of a compound based on its structure. In particular, behavior in a biological system can 
+be very complex and difficult to predict in a simple way.
+
+Some examples are:
+
+* drug activity
+* drug side effects
+* environmental toxicity
+
+## QSAR Modeling Using Descriptors
+
+Basic approach:
+
+1. Property to predict
+2. Series of "descriptors" - numbers that describe the structure of the molecule which are easy to compute or measure, such as:
+    * molecular weight
+    * solubility
+    * number of hydrogen-bond-donors
+    * dipole moment
+    
+## QSAR Modeling Using Descriptors
+
+Using these descriptors, it is possible to build a _multiple regression model_, an equation to predict the activity of interest:
+
+`
+activity = intercept + (const1) * (descriptor1) + (const2) * (descriptor2) + (const3) * (descriptor3) ...
+`
+
+In this case, the “activity” represents the Dependent variable (also called the Response variable) and the “descriptors” represent multiple Independent variables (also called Explanatory variables).  
+
+This equation is an expansion of the standard formula for a straight line:
+
+`
+y =  slope * x + intercept
+`
+
+## QSAR Exercise
+
+**Generate an equation to predict the pKa of substituted benzoic acids based on a set of 8 descriptors, and then reduce the number of variables to the simplest equation that gives the best fit.**
 
 
-## R Markdown
+## R Markdown - Formatting
 
-This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+Use the hash '#' to designate headers. Multiple hashes will create subheadings.
+Be sure to leave a space between the hash and text for R Markdown to recognize a heading!
 
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+Use a single asterisk * or underscore _ to make something _italic_.
+Use double asterisks ** or underscores __ to make something **bold**.
+
 
 ## Learning Resources
 
