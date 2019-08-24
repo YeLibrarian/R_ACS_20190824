@@ -23,7 +23,7 @@ knitr::opts_chunk$set(echo = FALSE)
 - Pre-workshop survey https://forms.gle/wjKkYmZR1xHeYUot9 
 - Please accept the invitation from RStudio Cloud and create an account if you have not
 - Open group note-taking http://bit.ly/notesRChem 
-- Link to slides 
+- Link to slides http://rpubs.com/YeLibrarian/slides20190824 
 
 ## Acknowledgement
 
