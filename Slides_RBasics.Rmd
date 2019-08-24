@@ -197,6 +197,7 @@ When you click the **Knit** button a document will be generated that includes bo
   - Data Analysis and Visualization for Ecologist https://datacarpentry.org/R-ecology-lesson/ 
 - RStudio Cloud Primers
 - Coursera - Data Science Specialization https://www.coursera.org/specializations/jhu-data-science 
+- RStudio Cheat Sheets https://www.rstudio.com/resources/cheatsheets/ 
 
 ## Slide with R Output
 
