@@ -198,16 +198,9 @@ When you click the **Knit** button a document will be generated that includes bo
 - RStudio Cloud Primers
 - Coursera - Data Science Specialization https://www.coursera.org/specializations/jhu-data-science 
 - RStudio Cheat Sheets https://www.rstudio.com/resources/cheatsheets/ 
+- Teaching best practices 
+  - Teach Tech Together, Greg Wilson http://teachtogether.tech/ 
+  - Brown NCC, Wilson G (2018) Ten quick tips for teaching programming. PLOS Computational Biology 14(4): e1006023. https://doi.org/10.1371/journal.pcbi.1006023
 
-## Slide with R Output
 
-```{r cars, echo = TRUE}
-summary(cars)
-```
-
-## Slide with Plot
-
-```{r pressure}
-plot(pressure)
-```
 
